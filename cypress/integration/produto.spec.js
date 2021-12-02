@@ -11,7 +11,7 @@ describe('Funcionalidade produto', () => {
         cy.get('.product-block').first().click()
     });
 
-    it.only('Deve adicionar um produto ao carrinho ', () => {
+    it('Deve adicionar um produto ao carrinho ', () => {
 
         var quantidade = 2
         
@@ -24,4 +24,8 @@ describe('Funcionalidade produto', () => {
         cy.get('.dropdown-toggle > .mini-cart-items').should('contain',quantidade )
         cy.get('.woocommerce-message').should('contain', quantidade +' × “Abominable Hoodie” foram adicionados no seu carrinho.')
     });
+    it('Deve adicionar produtos ao carrinho - usando comando customizado',()=>{
+        cy.addProdutos(2,'S','Blue')
+    })
+        
 });
