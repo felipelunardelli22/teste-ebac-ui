@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+"scripts": {
+
+    "test" :"echo \"Error: no test specified\" && exit 1",
+    "cy:run":"npx cypress run -- browser chrome",
+    "cy:open":"npx cypress open",   
+    "cy:report":"cypress run --record --key 20b362ed-4b98-493d-abae-3ba569c0df61"
   },
   "repository": {
     "type": "git",
@@ -18,6 +22,6 @@
   },
   "homepage": "https://github.com/felipelunardelli22/teste-ebac-ui#readme",
   "devDependencies": {
-    "cypress": "^9.1.0"
+    "cypress": "^9.1.1"
   }
 }
